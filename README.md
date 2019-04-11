@@ -22,7 +22,7 @@ Lo que debemos hacer es lo siguiente:
 -al section le agregamos la clase animacion-hijos y data-animation con el nombre de la animacion que queremos asignarle y darle el data-delay para hacer el efecto cascada.
 
 ## A tener en cuenta
-Hay que tener en cuneta que la animacion-hijos le otorga la animacion a hijos directos.
+Hay que tener en cuenta que la animacion-hijos le otorga la animacion a hijos directos.
 Que a su vez deberan tener un css mencionado depnediendo de los tipos de elementos. Ejemplo:
 
     .animacion, 
