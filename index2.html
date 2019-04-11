@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container{
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .container > section{
+            min-height: 100vh;
+        }
+        .container > section:first-child{
+            background-color: aquamarine;
+        }
+        .container > section:nth-child(2){
+            background-color: #d0adc9;
+        }
+        .container > section:nth-child(3){
+            background-color: #aaf197;
+        }
+        /*
+        en animacion-hijos hay que agregarle todos los directos que se queiren implementar
+        */
+        .animacion, .animacion-hijos > p{
+            opacity: 0;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+
+        /*ANIMACIONES*/
+        .fadeIn{
+            animation-name: fadeIn;
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translate3d(0,20%,0)
+            }
+
+            to {
+                opacity: 1;
+                transform: translateZ(0)
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="uno animacion"  data-animation="fadeIn" data-delay="0.2">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore officia placeat expedita aliquam, impedit nam illo vel, voluptates earum ullam at modi? Porro expedita soluta aut consequuntur accusamus obcaecati vero!</p>
+        </section>
+    
+        <section class="dos animacion" data-animation="fadeIn"> 
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore officia placeat expedita aliquam, impedit nam illo vel, voluptates earum ullam at modi? Porro expedita soluta aut consequuntur accusamus obcaecati vero!</p>
+        </section>
+    
+        <section class="cuatro">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore officia placeat expedita aliquam, impedit nam illo vel, voluptates earum ullam at modi? Porro expedita soluta aut consequuntur accusamus obcaecati vero!</p>
+        </section>
+
+        <section class="tres animacion-hijos" data-animation="fadeIn" data-delay="0.2">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore officia placeat expedita aliquam, impedit nam illo vel, voluptates earum ullam at modi? Porro expedita soluta aut consequuntur accusamus obcaecati vero!</p>
+                <p>lofnief eofseof iseoifjs efiosef</p>
+                <p>lofnief eofseof iseoifjs efiosef</p>
+                <p>lofnief eofseof iseoifjs efiosef</p>
+                <p>lofnief eofseof iseoifjs efiosef</p>
+        </section> 
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
